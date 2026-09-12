@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0b1f3a;
+  --gold: #c9a227;
+  --cream: #f6f1e7;
+  --ink: #1a1a1a;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --font-sans: var(--font-source-sans);
+  --font-display: var(--font-playfair);
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.field-input {
+  @apply w-full rounded-xl border border-navy/15 bg-white px-3 py-2.5 text-ink outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30;
+}
+
+.field-input-dark {
+  @apply w-full rounded-xl border border-cream/20 bg-navy/80 px-3 py-2.5 text-cream outline-none transition placeholder:text-cream/40 focus:border-gold focus:ring-2 focus:ring-gold/30;
+}
+
+.prose-iwf h2 {
+  @apply font-display text-2xl text-navy;
+}
+
+.prose-iwf p {
+  @apply mt-2 text-ink/80 leading-relaxed;
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" role="img" aria-label="Minister placeholder">
+  <rect width="400" height="300" fill="#0B1F3A"/>
+  <circle cx="200" cy="120" r="48" fill="#C9A227" opacity="0.85"/>
+  <rect x="120" y="185" width="160" height="70" rx="35" fill="#C9A227" opacity="0.5"/>
+  <text x="200" y="280" text-anchor="middle" fill="#F6F1E7" font-family="sans-serif" font-size="14" letter-spacing="2">MINISTER TBA</text>
+</svg>
