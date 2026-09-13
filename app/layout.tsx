@@ -17,15 +17,16 @@ const sourceSans = Source_Sans_3({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://iworshipfestival.org";
+
 export const metadata: Metadata = {
   title: {
     default: `${EVENT.shortName} — ${EVENT.name}`,
     template: `%s | ${EVENT.shortName}`,
   },
   description: `${EVENT.name} at ${EVENT.venue}, ${EVENT.city} — ${EVENT.dateLabel}. Free registration.`,
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://iworshipfestival.org"
-  ),
+  metadataBase: new URL(siteUrl),
 };
 
 export default function RootLayout({
