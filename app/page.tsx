@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { Countdown } from "@/components/Countdown";
+import { HowItWorks } from "@/components/home/HowItWorks";
+import { MinistersTeaser } from "@/components/home/MinistersTeaser";
+import { ProgrammePreview } from "@/components/home/ProgrammePreview";
 import { EVENT } from "@/lib/data/event";
 import { getRegistrationCount } from "@/lib/stats";
 
@@ -90,16 +93,16 @@ export default async function HomePage() {
               accreditation, streaming live, and responding when the altar call
               goes out.
             </p>
+            <p>
+              We are contending for 10,000+ in the stadium and representation from
+              15+ nations — a visible sign that worship still draws the peoples
+              together under one Name.
+            </p>
           </div>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-3">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2">
           {[
-            {
-              title: "Two sessions",
-              body: "Morning praise (9:00 AM–2:00 PM) and evening encounter (4:00 PM–9:30 PM).",
-              href: "/programme",
-            },
             {
               title: "Nations welcome",
               body: "Register with your country so we can track representation toward 15+ nations.",
@@ -122,6 +125,10 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
+
+      <HowItWorks />
+      <ProgrammePreview />
+      <MinistersTeaser />
     </>
   );
 }
